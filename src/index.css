@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 33% 96%;
+    --foreground: 0 0% 18%;
+
+    --card: 40 33% 98%;
+    --card-foreground: 0 0% 18%;
+
+    --popover: 40 33% 98%;
+    --popover-foreground: 0 0% 18%;
+
+    --primary: 216 55% 23%;
+    --primary-foreground: 40 33% 96%;
+
+    --secondary: 222 15% 62%;
+    --secondary-foreground: 40 33% 96%;
+
+    --muted: 40 20% 92%;
+    --muted-foreground: 0 0% 40%;
+
+    --accent: 40 50% 55%;
+    --accent-foreground: 40 33% 96%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 40 20% 88%;
+    --input: 40 20% 88%;
+    --ring: 216 55% 23%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Custom tokens */
+    --navy: 216 55% 23%;
+    --slate-blue: 222 15% 62%;
+    --gold: 40 50% 55%;
+    --sand: 40 33% 96%;
+    --charcoal: 0 0% 18%;
+    --warm-white: 40 33% 99%;
+
+    --font-display: 'Playfair Display', serif;
+    --font-body: 'Montserrat', sans-serif;
+
+    --shadow-soft: 0 4px 30px hsl(216 55% 23% / 0.08);
+    --shadow-card: 0 8px 40px hsl(216 55% 23% / 0.06);
+    --shadow-elevated: 0 20px 60px hsl(216 55% 23% / 0.12);
+  }
+
+  .dark {
+    --background: 216 55% 8%;
+    --foreground: 40 33% 96%;
+    --card: 216 55% 12%;
+    --card-foreground: 40 33% 96%;
+    --popover: 216 55% 12%;
+    --popover-foreground: 40 33% 96%;
+    --primary: 40 50% 55%;
+    --primary-foreground: 216 55% 8%;
+    --secondary: 222 15% 30%;
+    --secondary-foreground: 40 33% 96%;
+    --muted: 216 30% 18%;
+    --muted-foreground: 40 15% 65%;
+    --accent: 40 50% 55%;
+    --accent-foreground: 216 55% 8%;
+    --border: 216 30% 20%;
+    --input: 216 30% 20%;
+    --ring: 40 50% 55%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
